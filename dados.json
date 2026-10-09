@@ -337,52 +337,52 @@
                     ],
     "fotos":  [
                   {
-                      "arquivo":  "img/fotos/maracatu-rua.jpg",
+                      "arquivo":  "maracatu-rua.jpg",
                       "legenda":  "Grupo de maracatu da APAE em apresentação na rua",
                       "alt":  "Grupo de pessoas com camisetas laranja tocando tambores em apresentação ao ar livre"
                   },
                   {
-                      "arquivo":  "img/fotos/maracatu-palco.jpg",
+                      "arquivo":  "maracatu-palco.jpg",
                       "legenda":  "Apresentação do maracatu em um palco",
                       "alt":  "Grupo de maracatu com instrumentos de percussão sobre um palco, em frente à plateia"
                   },
                   {
-                      "arquivo":  "img/fotos/evento-comunidade.jpg",
+                      "arquivo":  "evento-comunidade.jpg",
                       "legenda":  "Evento com usuários, famílias e comunidade",
                       "alt":  "Multidão de pessoas com camisetas azuis reunidas ao ar livre em um evento"
                   },
                   {
-                      "arquivo":  "img/fotos/parque-grupo.jpg",
+                      "arquivo":  "parque-grupo.jpg",
                       "legenda":  "Passeio no parque ecológico",
                       "alt":  "Grupo de usuários e profissionais reunido sob as árvores em um parque, com uma pessoa em cadeira de rodas"
                   },
                   {
-                      "arquivo":  "img/fotos/piquenique.jpg",
+                      "arquivo":  "piquenique.jpg",
                       "legenda":  "Piquenique no parque",
                       "alt":  "Pessoas sentadas em uma toalha de piquenique no chão do parque, sorrindo"
                   },
                   {
-                      "arquivo":  "img/fotos/oficina-arte.jpg",
+                      "arquivo":  "oficina-arte.jpg",
                       "legenda":  "Oficina de arte no Centro Dia",
                       "alt":  "Usuário pintando com tinta sobre papel em uma mesa"
                   },
                   {
-                      "arquivo":  "img/fotos/jogo-coordenacao.jpg",
+                      "arquivo":  "jogo-coordenacao.jpg",
                       "legenda":  "Atividade de coordenação motora",
                       "alt":  "Participante encaixando argolas coloridas em um jogo de madeira"
                   },
                   {
-                      "arquivo":  "img/fotos/encontro-familias.jpg",
+                      "arquivo":  "encontro-familias.jpg",
                       "legenda":  "Encontro com famílias e cuidadores",
                       "alt":  "Grupo de familiares sentados em cadeiras em uma sala, assistindo a uma apresentação"
                   },
                   {
-                      "arquivo":  "img/fotos/ifmg-visita.jpg",
+                      "arquivo":  "ifmg-visita.jpg",
                       "legenda":  "Visita ao Instituto Federal (IFMG)",
                       "alt":  "Grupo animado de usuários e equipe posando diante da parede do Instituto Federal"
                   },
                   {
-                      "arquivo":  "img/fotos/forum-auditorio.jpg",
+                      "arquivo":  "forum-auditorio.jpg",
                       "legenda":  "Encontro em auditório com bandeira da APAE",
                       "alt":  "Grupo grande de pessoas reunido em um auditório segurando uma bandeira azul"
                   }
