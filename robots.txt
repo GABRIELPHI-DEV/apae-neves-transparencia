@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Sitemap: https://gabrielphi-dev.github.io/apae-neves-transparencia/sitemap.xml
