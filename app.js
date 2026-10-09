@@ -125,8 +125,8 @@ function renderStats(){
   var items=[
     {v:T.length,f:function(n){return Math.round(n)},l:'termos de fomento formalizados desde '+Math.min.apply(null,T.map(function(t){return t.ano})),fe:T.length+' acordos com a Prefeitura'},
     {v:tot,f:function(n){return 'R$ '+Math.round(n/1000).toLocaleString('pt-BR')+' mil'},l:'em recursos previstos nos termos',fe:'dinheiro previsto nos acordos'},
-    {v:I.usuarios,f:function(n){return Math.round(n)},l:'pessoas com deficiência atendidas em '+I.ano,fe:'pessoas atendidas em '+I.ano},
-    {v:I.capacidade,f:function(n){return Math.round(n)},l:'vagas de atendimento no Centro Dia',fe:'vagas no Centro Dia'}
+    {v:I.atendidos,f:function(n){return Math.round(n)},l:'pessoas com deficiência atendidas no Centro Dia (capacidade máxima)',fe:'pessoas atendidas no Centro Dia (máximo)'},
+    {v:I.ambiencias,f:function(n){return Math.round(n)},l:'tipos de atividade planejados toda semana',fe:'tipos de atividade toda semana'}
   ];
   el.innerHTML=items.map(function(it,i){return '<div class="stat reveal"><strong data-n="'+i+'">'+esc(it.f(it.v))+'</strong><span data-fe="'+esc(it.fe)+'">'+esc(it.l)+'</span></div>'}).join('');
   items.forEach(function(it,i){countUp($('[data-n="'+i+'"]',el),it.v,it.f)});
@@ -134,7 +134,7 @@ function renderStats(){
 function renderImpacto(){
   var I=D.impacto||{},el=$('#numbers');if(!el)return;
   var n=[
-    {v:I.usuarios,l:'pessoas com deficiência atendidas em '+I.ano,fe:'pessoas atendidas em '+I.ano},
+    {v:I.atendidos,l:'pessoas atendidas no Centro Dia, a capacidade máxima de atendimento',fe:'pessoas atendidas no Centro Dia (máximo)'},
     {v:I.familiasEncontros,l:'familiares por encontro mensal do Cuidando de Quem Cuida',fe:'familiares em cada encontro do mês'},
     {v:I.acoes,l:'tipos de ação e evento registrados em '+I.ano,fe:'tipos de atividade e festa em '+I.ano},
     {v:I.apresentacoes,l:'apresentações do grupo de maracatu em '+I.ano,fe:'vezes que o maracatu se apresentou'},
@@ -159,7 +159,7 @@ function renderCards(){
   if(!list.length){c.innerHTML='<div class="empty">Nenhum termo encontrado com esses filtros. Limpe a busca ou escolha "Todos".</div>';return}
   c.innerHTML=list.map(function(t,i){return '<button class="t" style="animation-delay:'+(i*60)+'ms" type="button" data-open="'+esc(t.num+'-'+t.ano)+'" aria-haspopup="dialog">'+
     '<div class="num2">'+esc(t.num)+'<small>/'+t.ano+'</small></div><h3>'+esc(t.nome)+'</h3><p data-fe="'+esc(t.facil||t.objeto)+'">'+esc(t.objeto)+'</p>'+
-    '<div class="tags"><span class="tag y">'+(t.origem==='Federal'?'Emenda federal':'Emenda municipal')+'</span><span class="tag">'+(t.situacao==='plano'?'Plano de trabalho 2026':'Termo de Fomento')+'</span></div>'+
+    '<div class="tags"><span class="tag y">'+(t.origem==='Federal'?'Emenda federal':'Emenda municipal')+'</span><span class="tag">'+(t.situacao==='plano'?'Plano de trabalho 2026':'Termo de Fomento')+'</span>'+(t.etapa?'<span class="tag y">'+esc(t.etapa)+'</span>':'')+'</div>'+
     '<div class="foot"><span class="val">'+brl0(t.valor)+'</span><span class="more">Ver ficha <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></button>'}).join('');
   applyFE();
 }
@@ -167,7 +167,7 @@ var lastFocus=null;
 function openSheet(id){
   var t=(D.termos||[]).filter(function(x){return x.num+'-'+x.ano===id})[0];if(!t)return;
   lastFocus=document.activeElement;
-  var rows=[[t.situacao==='plano'?'Emenda e plano de trabalho':'Termo de Fomento',t.num+'/'+t.ano],t.situacao==='plano'?['Situação','Plano de trabalho de 2026. Termo ainda não publicado no portal da Prefeitura.']:null,['Valor total',brl(t.valor)],['Origem do recurso',t.origem==='Federal'?'Emenda parlamentar federal':'Emendas parlamentares municipais'],['Emenda',t.emenda],t.processo?['Processo administrativo',t.processo]:null,t.vigencia?['Vigência ou execução',t.vigencia]:null,['Secretaria responsável',(D.instituicao||{}).secretaria]].filter(Boolean);
+  var rows=[[t.situacao==='plano'?'Emenda e plano de trabalho':'Termo de Fomento',t.num+'/'+t.ano],t.situacao==='plano'?['Situação','Plano de trabalho de 2026. Termo ainda não publicado no portal da Prefeitura.']:null,t.etapa?['Etapa de liberação',t.etapa]:null,t.previsao?['Previsão de liberação',t.previsao]:null,['Valor total',brl(t.valor)],['Origem do recurso',t.origem==='Federal'?'Emenda parlamentar federal':'Emendas parlamentares municipais'],['Emenda',t.emenda],t.processo?['Processo administrativo',t.processo]:null,t.vigencia?['Vigência ou execução',t.vigencia]:null,['Secretaria responsável',(D.instituicao||{}).secretaria]].filter(Boolean);
   var box=$('#box');
   box.innerHTML='<button class="iconbtn x" type="button" data-close aria-label="Fechar a ficha">✕</button><span class="tag y">'+(t.origem==='Federal'?'Emenda federal':'Emenda municipal')+'</span><h3 id="sh-title">'+esc(t.nome)+'</h3><p class="obj">'+esc(t.objeto)+'</p><dl class="data">'+rows.map(function(r){return '<div><dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd></div>'}).join('')+'</dl><div class="actions">'+(t.link?'<a class="btn pri" href="'+esc(t.link)+'" target="_blank" rel="noopener">Abrir o termo assinado</a>':'<span class="tag">Termo ainda não publicado no portal da Prefeitura</span>')+'<button class="btn sec" type="button" data-close>Fechar</button></div>';
   var s=$('#sheet');s.classList.add('open');document.body.style.overflow='hidden';$('.x',box).focus();

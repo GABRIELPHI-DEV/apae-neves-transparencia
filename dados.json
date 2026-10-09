@@ -42,14 +42,16 @@
                },
     "impacto":  {
                     "ano":  2024,
-                    "fonte":  "Relatório de Atividades 2024 (último relatório anual concluído) e plano de trabalho de 2025",
+                    "fonte":  "Capacidade máxima de atendimento do Centro Dia (2026) e Relatório de Atividades 2024 (demais números)",
                     "usuarios":  79,
                     "capacidade":  100,
                     "familiasEncontros":  15,
                     "apresentacoes":  10,
                     "ambiencias":  5,
                     "acoes":  16,
-                    "vezesPorSemana":  2
+                    "vezesPorSemana":  2,
+                    "atendidos":  100,
+                    "anoAtendidos":  2026
                 },
     "atividades":  [
                        {
@@ -139,7 +141,9 @@
                        "processo":  "9253",
                        "vigencia":  "10/03/2025 a 09/03/2027",
                        "link":  "https://ribeiraodasneves.mg.gov.br/src/common/assets/documentos/parcerias/Apae-4.pdf",
-                       "situacao":  "formalizado"
+                       "situacao":  "formalizado",
+                       "etapa":  "",
+                       "previsao":  ""
                    },
                    {
                        "num":  "006",
@@ -154,7 +158,9 @@
                        "processo":  "",
                        "vigencia":  "Execução de 04/2025 a 03/2026",
                        "link":  "",
-                       "situacao":  "formalizado"
+                       "situacao":  "formalizado",
+                       "etapa":  "",
+                       "previsao":  ""
                    },
                    {
                        "num":  "023",
@@ -169,7 +175,9 @@
                        "processo":  "5075/2024",
                        "vigencia":  "Execução de 11/2024 a 10/2025",
                        "link":  "https://ribeiraodasneves.mg.gov.br/src/common/assets/documentos/parcerias/Apae-termo-023.pdf",
-                       "situacao":  "formalizado"
+                       "situacao":  "formalizado",
+                       "etapa":  "",
+                       "previsao":  ""
                    },
                    {
                        "num":  "015",
@@ -184,7 +192,9 @@
                        "processo":  "3276/2024",
                        "vigencia":  "Repasse em parcela única de R$ 220.000,00",
                        "link":  "https://ribeiraodasneves.mg.gov.br/src/common/assets/documentos/parcerias/APAE-TERMO-015-24.pdf",
-                       "situacao":  "formalizado"
+                       "situacao":  "formalizado",
+                       "etapa":  "",
+                       "previsao":  ""
                    },
                    {
                        "num":  "024",
@@ -199,7 +209,9 @@
                        "processo":  "3284/2024",
                        "vigencia":  "",
                        "link":  "https://ribeiraodasneves.mg.gov.br/src/common/assets/documentos/parcerias/Apae-termo-024-1.pdf",
-                       "situacao":  "formalizado"
+                       "situacao":  "formalizado",
+                       "etapa":  "",
+                       "previsao":  ""
                    },
                    {
                        "num":  "017",
@@ -214,7 +226,9 @@
                        "processo":  "4370/2022",
                        "vigencia":  "",
                        "link":  "https://ribeiraodasneves.mg.gov.br/src/common/assets/documentos/parcerias/TERMO_APAE_017-2022.pdf",
-                       "situacao":  "formalizado"
+                       "situacao":  "formalizado",
+                       "etapa":  "",
+                       "previsao":  ""
                    },
                    {
                        "num":  "210",
@@ -229,7 +243,9 @@
                        "emenda":  "Emenda parlamentar impositiva municipal nº 210/2026",
                        "processo":  "",
                        "vigencia":  "10 meses após o recebimento integral do recurso",
-                       "link":  ""
+                       "link":  "",
+                       "etapa":  "Aguardando o termo",
+                       "previsao":  "A confirmar com a Prefeitura"
                    },
                    {
                        "num":  "110",
@@ -244,7 +260,43 @@
                        "emenda":  "Emenda parlamentar de bancada nº 110-C/2025",
                        "processo":  "",
                        "vigencia":  "3 meses após o recebimento integral do recurso",
-                       "link":  ""
+                       "link":  "",
+                       "etapa":  "Aguardando o termo",
+                       "previsao":  "A confirmar com a Prefeitura"
+                   },
+                   {
+                       "num":  "130",
+                       "ano":  2026,
+                       "nome":  "Atividades, palestras e transporte",
+                       "valor":  31718.18,
+                       "origem":  "Municipal",
+                       "cor":  "#D5E6A0",
+                       "situacao":  "plano",
+                       "objeto":  "Custeio de lanches para as atividades, palestrantes para os encontros com famílias, manutenção e combustível do veículo da instituição e impressões gráficas (20 mil unidades).",
+                       "facil":  "Dinheiro para lanches, palestras, combustível do carro da APAE e materiais impressos.",
+                       "emenda":  "Emenda parlamentar 130-C/2025",
+                       "processo":  "",
+                       "vigencia":  "",
+                       "link":  "",
+                       "etapa":  "Aguardando o termo",
+                       "previsao":  "A confirmar com a Prefeitura"
+                   },
+                   {
+                       "num":  "273",
+                       "ano":  2026,
+                       "nome":  "Assistente Social e material gráfico",
+                       "valor":  50000,
+                       "origem":  "Municipal",
+                       "cor":  "#EED68A",
+                       "situacao":  "plano",
+                       "objeto":  "Contratação de 1 assistente social (20 horas semanais, por 12 meses) para a equipe do Centro Dia e custeio de materiais gráficos.",
+                       "facil":  "Dinheiro para contratar uma assistente social por 12 meses e pagar materiais impressos.",
+                       "emenda":  "Emenda parlamentar 273-C/2025",
+                       "processo":  "",
+                       "vigencia":  "12 meses após o recebimento do recurso",
+                       "link":  "",
+                       "etapa":  "Aguardando o termo",
+                       "previsao":  "A confirmar com a Prefeitura"
                    }
                ],
     "diretoria":  [
