@@ -372,3 +372,9 @@ footer .logo b{font:800 1.15rem/1.1 var(--f-display);color:#fff}
 
 @media (max-width:860px) and (max-height:820px){.emblem{display:none}.hero{padding-block:14px 60px}.hero h1{margin:6px 0 8px}.lead{font-size:.93rem;line-height:1.5}.hero .btn{min-height:44px;padding:10px 16px;font-size:.95rem}.cta{margin-top:12px}}
 @media (max-width:860px) and (max-height:680px){.lead{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.stat span{font-size:.76rem}.stat{padding:10px 12px}}
+
+/* aviso de privacidade em faixa fina */
+.cookie{left:0;right:0;bottom:0;max-width:none;border-radius:14px 14px 0 0;padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));gap:12px;flex-wrap:nowrap;justify-content:space-between;border-left:0;border-right:0;border-bottom:0}
+.cookie p{flex:1 1 auto;font-size:.88rem;line-height:1.4}
+.cookie .btn{min-height:40px;padding:8px 18px;font-size:.92rem;flex:none}
+@media (max-width:640px){.cookie{flex-wrap:wrap}.cookie .btn{width:100%}}
